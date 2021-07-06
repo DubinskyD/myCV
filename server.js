@@ -35,6 +35,7 @@ server.use('/cv', routes);
 
 if (process.env.NODE_ENV === 'production') {
   const indexFile = join(__dirname, 'build/index.html');
+
   server.get('*', (req, res) => fs.createReadStream(indexFile).pipe(res));
 }
 
