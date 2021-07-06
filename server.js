@@ -14,8 +14,13 @@ if (process.env.NODE_ENV === 'production') {
   server.use((req, res, next) => {
     res.header('X-Powered-By': 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
 
-    if (req.header('x-forwarded-proto') !== 'https') res.redirect(`https://${req.header('host')}${req.url}`)
-    else  next();
+    console.log(req.header('x-forwarded-proto'));
+    console.log(`https://${}${}`);
+    console.log(req.header('host'));
+    console.log(req.url);
+    console.log(req.headers);
+
+    next();
   })
 }
 
