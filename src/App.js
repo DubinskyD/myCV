@@ -8,6 +8,7 @@ import Awards from './components/Awards/Awards';
 import WorkExperience from './components/WorkExperience/WorkExperience';
 import Contacts from './components/Contacts/Contacts';
 import Avatar from './components/Avatar/Avatar';
+import Preloader from './components/Preloader/Preloader';
 
 class App extends Component {
   componentDidMount() {
@@ -15,6 +16,10 @@ class App extends Component {
   }
 
   render() {
+    if (!this.props.initialized) {
+      return <Preloader />
+    }
+
     return (
       <div>
         <div>
@@ -58,7 +63,8 @@ const mapStateToProps = (state) => ({
   name: state.profile.name,
   surname: state.profile.surname,
   grade: state.profile.grade,
-  position: state.profile.position
+  position: state.profile.position,
+  initialized: state.app.initialized
 })
 
 export default connect(mapStateToProps, { initializeApp })(App);
