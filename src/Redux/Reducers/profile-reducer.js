@@ -3,7 +3,7 @@ const SET_PROFILE_DATA = 'SET_PROFILE_DATA';
 
 let initialState = {
    id: 1,
-   name: 'Dmitriy',
+   name: 'Test',
    surname: 'Dubinsky',
    position: 'front-end developer',
    grade: 'junior',
@@ -75,10 +75,9 @@ export const setProfileData = (data) => ({ type: SET_PROFILE_DATA, data })
 export const getProfileData = () => {
    return async (dispatch) => {
       let response = await profileApi.getProfile();
-      if (response.data.resultCode === 0) {
-         let data = response.data.data;
-         dispatch(setProfileData(data))
-      }
+      let data = response.data;
+      dispatch(setProfileData(data))
+
    }
 }
 
