@@ -12,15 +12,10 @@ server
 
 if (process.env.NODE_ENV === 'production') {
   server.use((req, res, next) => {
-    res.header('X-Powered-By': 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
+    res.header('X-Powered-By', 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
 
-    console.log(req.header('x-forwarded-proto'));
-    console.log(`https://${}${}`);
-    console.log(req.header('host'));
-    console.log(req.url);
-    console.log(req.headers);
-
-    next();
+    if (req.header('x-forwarded-proto') !== 'https') res.redirect(`https://${req.header('host')}`)
+    else  next();
   })
 }
 
@@ -30,7 +25,7 @@ if (process.env.NODE_ENV !== 'production') {
         res.header('Access-Control-Allow-Origin', '*');
         res.header('Access-Control-Allow-Methods', 'GET');
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-        res.header('X-Powered-By': 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
+        res.header('X-Powered-By', 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
 
         next();
       });
