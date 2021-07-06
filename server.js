@@ -9,6 +9,19 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 server.use(express.static(join(__dirname, 'build')));
 
+const forceSsl = function (req, res, next) {
+  if (req.headers['x-forwarded-proto'] !== 'https') {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  }
+  return next();
+};
+
+app.configure(function () {
+  if (env === 'production') {
+    app.use(forceSsl);
+  }
+});
+
 server.use('/cv', routes);
 
 if (process.env.NODE_ENV === 'production') {
