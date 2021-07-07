@@ -4,7 +4,6 @@
    flex-direction: column;
    margin: 15px;
    padding-bottom: 25px;
-   /* border-bottom: 2px solid #eff0f2; */
 }
 .skillsContainer {
    display: flex;

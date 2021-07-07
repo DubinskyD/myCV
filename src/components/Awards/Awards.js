@@ -1,12 +1,12 @@
 import React from 'react';
-
+import styles from './awards.module.css';
 
 const Awards = ({ awards }) => {
    return (
-      <div>
-         <h3>Awards</h3>
+      <div className={styles.wrapper}>
+         <h3 className={styles.title}>Awards</h3>
          {awards.map(award => (
-            <p key={award}>{award}</p>
+            <p className={styles.award} key={award}>{award}</p>
          ))}
       </div>
    )
