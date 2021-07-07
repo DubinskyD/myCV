@@ -27,10 +27,10 @@ const Contacts = ({ contacts }) => {
             </a>
          </div>
          <div className={styles.phoneWrapper}>
-            <a href={`tg://resolve?domain=` + contacts.telephone_number} className={styles.telegram}>
+            <a href={`tg://resolve?domain=38` + contacts.telephone_number} className={styles.telegram}>
                <FontAwesomeIcon icon={faTelegram} color="#0088cc" size="lg" />
             </a>
-            <a href={`viber://add?number=` + contacts.telephone_number} className={styles.viber}>
+            <a href={`viber://add?number=38` + contacts.telephone_number} className={styles.viber}>
                <FontAwesomeIcon color="#8f5db7" icon={faViber} size="lg" />
             </a>
             <a href={'tel:' + contacts.telephone_number} className={styles.number}>
