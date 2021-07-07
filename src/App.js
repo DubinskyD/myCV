@@ -9,6 +9,7 @@ import WorkExperience from './components/WorkExperience/WorkExperience';
 import Contacts from './components/Contacts/Contacts';
 import Avatar from './components/Avatar/Avatar';
 import Preloader from './components/Preloader/Preloader';
+import './App.css';
 
 class App extends Component {
   componentDidMount() {
@@ -21,8 +22,8 @@ class App extends Component {
     }
 
     return (
-      <div>
-        <div>
+      <div class='main-grid'>
+        <div class="avatar">
           <Avatar
             name={this.props.name}
             surname={this.props.surname}
@@ -30,22 +31,22 @@ class App extends Component {
             position={this.props.position}
           />
         </div>
-        <div>
+        <div class="skills">
           <Skils skills={this.props.skills} />
         </div>
-        <div>
+        <div class="education">
           <Education education={this.props.education} />
         </div>
-        <div>
+        <div class="languages">
           <Languages languages={this.props.languages} />
         </div>
-        <div>
+        <div class="awards">
           <Awards awards={this.props.awards} />
         </div>
-        <div>
+        <div class="work-experience">
           <WorkExperience work_experience={this.props.work_experience} />
         </div>
-        <div>
+        <div class="contacts">
           <Contacts contacts={this.props.contacts} />
         </div>
       </div >

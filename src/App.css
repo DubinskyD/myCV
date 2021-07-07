@@ -1,3 +1,87 @@
-.mainGrid {
-   border: 1px solid red;
+.main-grid {
+   display: grid;
+   grid-template: auto / auto;
+   justify-items: center;
+   grid-template-areas:
+      "avatar"
+      "skills"
+      "education"
+      "languages "
+      "workExperience"
+      "awards"
+      "contacts";
+}
+
+.main-grid > div {
+}
+
+.avatar {
+   grid-area: avatar;
+}
+
+.work-experience {
+   grid-area: workExperience;
+   width: 90%;
+   border-bottom: 2px solid #eff0f2;
+}
+
+.skills {
+   grid-area: skills;
+   width: 90%;
+   border-bottom: 2px solid #eff0f2;
+}
+.education {
+   grid-area: education;
+   width: 90%;
+   border-bottom: 2px solid #eff0f2;
+}
+.languages {
+   grid-area: languages;
+   width: 90%;
+   border-bottom: 2px solid #eff0f2;
+}
+.awards {
+   grid-area: awards;
+   width: 90%;
+   border-bottom: 2px solid #eff0f2;
+}
+.contacts {
+   grid-area: contacts;
+}
+
+@media screen and (min-width: 600px) {
+   .main-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+         "avatar avatar  "
+         "skills workExperience"
+         "education workExperience"
+         "languages workExperience"
+         "awards workExperience"
+         "contacts contacts";
+   }
+   .skills {
+      grid-area: skills;
+      border-right: 2px solid #eff0f2;
+      width: 90%;
+   }
+   .education {
+      grid-area: education;
+      width: 90%;
+      border-right: 2px solid #eff0f2;
+   }
+   .languages {
+      grid-area: languages;
+      width: 90%;
+      border-right: 2px solid #eff0f2;
+   }
+   .awards {
+      grid-area: awards;
+      width: 90%;
+      border-right: 2px solid #eff0f2;
+      border-bottom: 0px;
+   }
+   .work-experience {
+      border-bottom: 0px;
+   }
 }

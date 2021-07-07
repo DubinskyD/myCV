@@ -1,15 +1,16 @@
 import React from 'react';
-
+import styles from './skills.module.css';
 
 const Skils = ({ skills }) => {
 
    return (
-      <div>
-         <h3>Skills Summary</h3>
-         {skills.map(skill => (
-            <span key={skill}> {skill}, </span>
-         ))}
-
+      <div className={styles.wrapper}>
+         <h3 className={styles.title}>Skills Summary</h3>
+         <div className={styles.skillsContainer}>
+            {skills.map(skill => (
+               <span key={skill} className={styles.skill}>{skill}, </span>
+            ))}
+         </div>
       </div>
    )
 }

@@ -1,0 +1,34 @@
+.avatarContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+
+   margin-bottom: 25px;
+}
+
+.avatar {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   /* background-image: url("../../assets/photo/photo1.jpg") no-repeat; */
+}
+.fullName {
+   text-transform: capitalize;
+   font-family: "Ovo", serif;
+   font-size: 28pt;
+
+   display: inline;
+   box-sizing: border-box;
+   margin: 10px;
+   padding: 3px;
+}
+
+.position {
+   text-transform: uppercase;
+   font-family: "Kollektif", sans-serif;
+   font-size: 10pt;
+   font-weight: 700;
+   letter-spacing: 3px;
+}

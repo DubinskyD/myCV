@@ -3,6 +3,7 @@ import React from 'react';
 
 const WorkExperience = ({ work_experience }) => {
 
+
    return (
       <div>
          <h3>Work Experience</h3>
@@ -16,7 +17,8 @@ const WorkExperience = ({ work_experience }) => {
                <p>{place.direction}</p>
                <ul>
                   {place.responsibilities.map(resp => (
-                     <li key={resp}>{resp}</li>
+
+                     <li key={resp} > {resp}</li>
                   ))}
                </ul>
             </div>

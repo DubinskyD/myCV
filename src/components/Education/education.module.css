@@ -1,0 +1,50 @@
+.wrapper {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin: 15px;
+   padding-bottom: 25px;
+
+   /* border-bottom: 2px solid #eff0f2; */
+}
+
+.title {
+   font-family: "Vesper Libre", serif;
+   font-weight: bold;
+   font-size: 12pt;
+   margin-bottom: 10px;
+}
+.universityGrade {
+   font-family: "Roboto", sans-serif;
+   font-size: 8pt;
+   font-style: italic;
+   font-weight: 700;
+   margin-top: 7px;
+}
+.universityName {
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
+   text-decoration: underline;
+   font-weight: bold;
+   font-style: italic;
+   margin-top: 7px;
+}
+.date {
+   font-family: "Roboto", sans-serif;
+   font-weight: 100;
+   margin-top: 7px;
+   font-size: 9pt;
+   color: #898a8b;
+}
+.subjectTitle {
+   font-family: "Roboto", sans-serif;
+   margin-top: 7px;
+   font-size: 9pt;
+   font-weight: 500;
+}
+.subject {
+   font-family: "Roboto", sans-serif;
+   margin-top: 7px;
+   font-size: 10pt;
+   font-weight: 700;
+}
