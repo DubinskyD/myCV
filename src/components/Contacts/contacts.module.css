@@ -1,4 +1,58 @@
 .wrapper {
    display: flex;
    flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 100px;
+}
+
+a {
+   text-decoration: none;
+}
+.emailWrapper {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+.socialMediaWrapper {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+.phoneWrapper {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+.locationWrapper {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+}
+svg {
+   margin-right: 7px;
+   height: 10px;
+}
+@media screen and (min-width: 600px) {
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+      height: 50px;
+   }
+
+   .emailWrapper {
+      flex: 0 1 50%;
+   }
+
+   .socialMediaWrapper {
+      flex: 0 1 50%;
+   }
+   .phoneWrapper {
+      flex: 0 1 50%;
+   }
+   .locationWrapper {
+      flex: 0 1 50%;
+   }
 }

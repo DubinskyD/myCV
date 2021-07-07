@@ -42,13 +42,16 @@
 .awards {
    grid-area: awards;
    width: 90%;
-   border-bottom: 2px solid #eff0f2;
+
    max-height: 100px;
 }
 .contacts {
    grid-area: contacts;
    background-color: #eff0f2;
    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 @media screen and (min-width: 600px) {
