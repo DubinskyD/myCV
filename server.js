@@ -5,23 +5,33 @@ const express = require('express');
 const server = express();
 const routes = require('./routes/cv');
 
-server.use(express.json());
-server.use(express.urlencoded({ extended: false }));
-server.use(express.static(join(__dirname, 'build')));
+server
+    .use(express.json())
+    .use(express.urlencoded({ extended: false }))
+    .use(express.static(join(__dirname, 'build')))
+    .use((req, res, next) => {
+      res.header('X-Powered-By', 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
+
+      next();
+    })
 
 if (process.env.NODE_ENV !== 'production') {
-  server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header("Access-Control-Allow-Methods", "GET");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  server
+      .use((req, res, next) => {
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Methods', 'GET');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+        res.header('X-Powered-By', 'Dmitriy Dubinsky <Dmitriy.Dubinsky@gmail.com>');
 
-    next();
-  })
+        next();
+      });
 }
+
 server.use('/cv', routes);
 
 if (process.env.NODE_ENV === 'production') {
   const indexFile = join(__dirname, 'build/index.html');
+
   server.get('*', (req, res) => fs.createReadStream(indexFile).pipe(res));
 }
 
