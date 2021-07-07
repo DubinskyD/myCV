@@ -21,8 +21,9 @@
 
    display: inline;
    box-sizing: border-box;
-   margin: 10px;
+   margin: 7px;
    padding: 3px;
+   border-bottom: 3px solid #eff0f2;
 }
 
 .position {

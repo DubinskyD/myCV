@@ -1,0 +1,57 @@
+.wrapper {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin: 15px;
+   padding-bottom: 25px;
+}
+.title {
+   font-family: "Vesper Libre", serif;
+   font-weight: bold;
+   font-size: 12pt;
+}
+.place {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 15px;
+}
+.position {
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
+   font-weight: bold;
+   font-style: italic;
+}
+.department {
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
+   font-weight: bold;
+   font-style: italic;
+   margin-top: 5px;
+   text-align: center;
+}
+.periodWrapper {
+   margin-top: 7px;
+   font-family: "Roboto", sans-serif;
+   font-weight: 100;
+   font-size: 9pt;
+   color: #898a8b;
+}
+.direction {
+   align-self: flex-start;
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
+.list {
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
+   list-style-type: disc;
+   width: 100%;
+}
+.listResp {
+   margin-top: 5px;
+}
