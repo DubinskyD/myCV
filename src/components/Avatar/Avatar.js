@@ -1,13 +1,16 @@
 import React from 'react';
-import style from './avatar.module.css';
+import styles from './avatar.module.css';
+import photo from '../../assets/photo/photo1.jpg';
 
 const Avatar = ({ name, surname, grade, position }) => {
    return (
-      <div className={style.avatarContainer}>
-         <img src='../../assets/photo/photo1.jpg' alt='#' className={style.avatar}></img>
-         <p className={style.fullName}><span>{name} </span><span>{surname}</span></p>
-         <p className={style.position}><span>{grade} </span><span>{position}</span></p>
-      </div>
+      <div className={styles.avatarContainer}>
+         <figure className={styles.figure}>
+            <img src={photo} alt="#" className={styles.photo}></img>
+         </figure>
+         <p className={styles.fullName}><span>{name} </span><span>{surname}</span></p>
+         <p className={styles.position}><span>{grade} </span><span>{position}</span></p>
+      </div >
    )
 }
 

@@ -8,30 +8,30 @@ const Contacts = ({ contacts }) => {
    return (
       <div className={styles.wrapper}>
          <a href={`mailto:` + contacts.email} className={styles.emailWrapper}>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} color="red" size="lg" />
             <span className={styles.email}> {contacts.email}</span>
          </a>
          <div className={styles.socialMediaWrapper}>
             <a href={contacts.facebook} className={styles.facebook}>
-               <FontAwesomeIcon icon={faFacebookSquare} />
+               <FontAwesomeIcon icon={faFacebookSquare} color="blue" size="lg" />
             </a>
 
             <a href={contacts.linkedin} className={styles.linkedin}>
-               <FontAwesomeIcon icon={faLinkedin} />
+               <FontAwesomeIcon icon={faLinkedin} color="blue" size="lg" />
             </a>
             <a href={contacts.github} className={styles.github}>
-               <FontAwesomeIcon icon={faGithubSquare} />
+               <FontAwesomeIcon icon={faGithubSquare} color="#6e5494" size="lg" />
             </a>
             <a href={contacts.skype} className={styles.skype}>
-               <FontAwesomeIcon icon={faSkype} />
+               <FontAwesomeIcon icon={faSkype} color="#00aff0" size="lg" />
             </a>
          </div>
          <div className={styles.phoneWrapper}>
             <a href={`tg://resolve?domain=` + contacts.telephone_number} className={styles.telegram}>
-               <FontAwesomeIcon icon={faTelegram} />
+               <FontAwesomeIcon icon={faTelegram} color="#0088cc" size="lg" />
             </a>
             <a href={`viber://add?number=` + contacts.telephone_number} className={styles.viber}>
-               <FontAwesomeIcon icon={faViber} />
+               <FontAwesomeIcon color="#8f5db7" icon={faViber} size="lg" />
             </a>
             <a href={'tel:' + contacts.telephone_number} className={styles.number}>
                {contacts.telephone_number}
@@ -40,7 +40,7 @@ const Contacts = ({ contacts }) => {
          </div>
 
          <div className={styles.locationWrapper}>
-            <FontAwesomeIcon icon={faCompass} />
+            <FontAwesomeIcon icon={faCompass} size="lg" />
             <span className={styles.location}>{contacts.location}</span>
          </div>
 

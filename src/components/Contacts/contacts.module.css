@@ -3,11 +3,14 @@
    flex-direction: column;
    align-items: center;
    justify-content: space-evenly;
-   height: 100px;
+   height: 150px;
 }
 
 a {
    text-decoration: none;
+   color: #000 !important;
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
 }
 .emailWrapper {
    width: 100%;
@@ -30,8 +33,20 @@ a {
    justify-content: flex-start;
 }
 svg {
-   margin-right: 7px;
-   height: 10px;
+   margin-right: 10px;
+}
+.email {
+   padding-top: 3px;
+}
+.locationWrapper {
+   font-family: "Roboto", sans-serif;
+   font-size: 10pt;
+}
+.location {
+   padding-top: 3px;
+}
+.number {
+   padding-top: 3px;
 }
 @media screen and (min-width: 600px) {
    .wrapper {

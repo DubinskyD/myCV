@@ -7,12 +7,19 @@
 
    margin-bottom: 25px;
 }
-
-.avatar {
-   width: 40px;
-   height: 40px;
+.figure {
+   margin-top: 15px;
+   width: 250px;
+   height: 250px;
    border-radius: 50%;
-   /* background-image: url("../../assets/photo/photo1.jpg") no-repeat; */
+   overflow: hidden;
+   -webkit-box-shadow: 11px 12px 22px 0px rgba(34, 60, 80, 0.29);
+   -moz-box-shadow: 11px 12px 22px 0px rgba(34, 60, 80, 0.29);
+   box-shadow: 11px 12px 22px 0px rgba(34, 60, 80, 0.29);
+}
+.photo {
+   margin: 0% -50% 0 -46%;
+   width: 115%;
 }
 .fullName {
    text-transform: capitalize;
